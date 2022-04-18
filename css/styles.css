@@ -1,0 +1,21 @@
+.page {
+    display: flex;
+}
+
+.media {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+}
+
+.account {
+    display: flex;
+}
