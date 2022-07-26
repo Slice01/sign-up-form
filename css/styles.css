@@ -1,21 +1,223 @@
+@font-face {
+    font-family: 'permanentMarker';
+    src:url("../assets/PermanentMarker-Regular.ttf");
+}
+
 .page {
     display: flex;
+    height: 100vh;
+    font-family: 'Calibri';
+    font-weight: bold;
+    font-size: 1.4rem;
 }
 
 .media {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis:0;
+    border: 1px solid black;
+    background-image: url("../assets/albina-white-unsplash.jpg");
+    background-size: cover;
+}
+
+.logoArea {
+    display: flex;
+    background-color: rgba(0,0,0,.3);
+    margin-top: 33.33vh;
+    justify-content: center;
+}
+
+#logo {
+    height: 10vw;
+    opacity: .9;
+}
+
+.name {
+    font-family: 'permanentMarker';
+    font-size: 3vw;
+    align-self: center;
+}
+
+.mediaCredit {
+    position: absolute;
+    margin-top: 96vh;
+    align-self: center;
+    font-size: 2vw;
+    
+}
+
+@media screen and (min-width: 1200px) {
+    .mediaCredit {
+        font-size: 24px;
+    }
 }
 
 .content {
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+    flex-grow: 2;
+    flex-shrink: 2;
+    flex-basis: 0;
+}
+
+.third {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+}
+
+.outer {
+    background-color: #eef4f7;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-bottom: 6px;
+    box-shadow: 10px 5px 5px black;
+    background-color: rgb(198, 205, 243);
+    border: 2px solid;
+}
+
+.statement {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .row {
     display: flex;
+    justify-content: space-around;
 }
 
-.account {
+.fieldinput {
+    position: relative;
+    height: 1.7em;
+}
+
+.field {
+    height: 100%;
+    padding: 0 0 0 .3em;
+    font-weight: bold;
+    background-color: #eef4f7;
+    border-color:rgb(170, 226, 170);
+}
+
+.field:focus {
+    opacity: .8;
+    border: 4px solid;
+    border-color: rgb(170, 226, 170);
+}
+
+.field:focus ~ .label,
+.field:not(:placeholder-shown) ~ .label {
+    opacity: 0;
+}
+
+.field:is(:placeholder-shown) ~ .label {
+    color: grey;
+    opacity: .8;
+}
+
+.field:required:is(:placeholder-shown), .field:required:invalid {
+    border-color: rgb(230, 31, 5);
+}
+
+.validBox {
+    border-color: rgb(170, 226, 170);
+}
+
+.required:after {
+    content:"*";
+    color: red;  
+    position: relative;
+    bottom: 200%;
+    left: 101% 
+}
+
+.label {
+    position: relative;
+    left: 0.3em;
+    bottom: 90%;
+    transform: translateY(-8%);
+}
+
+#message, #mismatchMessage {
+    position: absolute;
+    width: 15vw;
+    height: 10vh;
+    bottom: 23.5vh;
+    min-width: 200px;
+    border: 1px #aaaaaa solid;
+    border-radius: 10px;
+    background-color: #fdfde2;
+    padding: 12px;
+    color: #000000;
+    font-size: .7rem;
+    z-index: 1;
+}
+
+#message {
+    left: 45vw;
+}
+
+#mismatchMessage {
+    left: 78vw;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.seen {
+    opacity: .9;
+}
+
+h3 {
+    color:rgb(5, 31, 180);
+    padding: 0 0 6px 0;
+}
+
+.valid {
+    color: rgb(5,180,5);
+}
+
+.valid:after {
+    content: '\2713';
+    display: inline-block;
+    color: green;
+    padding: 0 0 0 3px;
+}
+
+.invalid {
+    color:red;
+}
+
+.belowForm {
     display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.createAccount, .haveAccount {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.belowItem {
+    margin: 1rem;
+}
+
+button {
+    width: 10rem;
+    padding: 0 0 1rem 0;
+}
+
+p {
+    margin: 0 3rem;
 }

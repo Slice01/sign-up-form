@@ -11,48 +11,81 @@
 <body>
     <div class="page">
         <div class="media">
-            <div class="logo">
-                <p>Logo</p>
+            <div class="logoArea">
+                <div class="logo">
+                    <img id="logo" src="./assets/transparent-logo.png">
+                </div>
+                <div class="name">
+                    <p>Sign-up Form</p>
+                </div>
             </div>
             <div class="mediaCredit">
-                <p>Logo Credit</p>
+                <p>Photo by <span style="font-weight: bold; text-decoration: underline;">Albina White</span> on <span style="font-weight: bold; text-decoration: underline;">Unsplash</span></p>
             </div>
         </div>
         <div class="content">
-            <div class="statement">
-                <p>This is not real</p>
+            <div class="statement outer third">
+                <p>This is not a real online service!  This is just a demo to show off my skills.  Hope you enjoy every part of it. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, commodi!</p>
+                <p>Are you <span style="font-style: italic;">intrigued</span> yet ?</p>
             </div>
-            <div class="form">
-                <form>
-                    <div class="row">
-                        <p>Comment</p>
-                    </div>
-                    <div class="row">
-                        <p>First Name</p>
-                        <p>Last Name</p>
-                    </div>
-                    <div class="row">
-                        <p>Email</p>
-                        <p>Phone Number</p>
-                    </div>
-                    <div class="row">
-                        <p>Password</p>
-                        <p>Confirm Password</p>
-                    </div>
-                </form>
-            </div>
-            <div class="belowForm">
-                <div class="button">
-                    <p>Create Account Button</p>
+            <form class="form third">
+                <div class="row top">
+                    <p>Give me all your deets!</p>
                 </div>
-                <div class="account">
-                    <p>Already have an account?</p>
-                    <p>Log In</p>                    
+                <div class="row">
+                    <div class="fieldinput required">
+                        <input type="text" autocomplete="given-name" class ="field" id="firstName" required placeholder=" ">
+                        <label for="firstName" class="label">First Name</label>
+                    </div>
+                    <div class="fieldinput required">
+                        <input type="text" autocomplete="family-name" class ="field" id="lastName"  required placeholder=" ">
+                        <label for="lastName" class="label">Last Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="fieldinput required">
+                        <input type="email" autocomplete="email" class="field" id="email"  required placeholder=" ">
+                        <label for="email" class="label">Email</label>
+                    </div>
+                    <div class="fieldinput">
+                        <input type="tel" autocomplete="tel" class="field" id="phoneNumber" placeholder=" ">
+                        <label for="phoneNumber" class="label">Phone Number</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="fieldinput required">
+                        <input type="password" autocomplete="new-password" class="field pfields" id="password" required placeholder=" " pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*).{8,}" title="Required: One capital, One lowercase, One number, Eight characters">
+                        <label for="password" class="label">Password</label>
+                    </div>
+                    <div id="message" class="hidden">
+                        <h3>Password must contain the following:</h3>
+                        <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                        <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                        <p id="number" class="invalid">A <b>number</b></p>
+                        <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+                    </div>
+                    <div id="mismatchMessage" class="hidden">
+                        <h3>Passwords must match:</h3>
+                        <p id="match" class="invalid">Matches</p>
+                    </div>
+                    <div class="fieldinput required">
+                        <input type="password" id="confirmPassword" autocomplete="new-password" class="field validBox pfields" id="confirmPassword"  required placeholder=" " pattern="(?=aZ).{700,700}">
+                        <label for="confirmPassword" class="label">Confirm Password</label>
+                    </div>
+                </div>
+            </form>
+            <div class="belowForm outer third">
+                <div class="createAccount">
+                    <button class="belowItem">Create Account</button>
+                </div>
+                <div class="haveAccount">
+                    <p class="belowItem">Already have an account?</p>
+                    <button class="belowItem">Log In</button>                    
                 </div>
             </div>
         </div>
-
-    </div>
-    
+    </div>    
 </body>
 </html>
+
+<script src="js/script.js"></script>
