@@ -4,7 +4,7 @@ const passConf = document.getElementById("confirmPassword");
 const reqDiv = document.getElementById('message');          //Messages
 const confirmDiv = document.getElementById('mismatchMessage');
 
-const letter = document.getElementById("letter");           //Requirements
+const letter = document.getElementById("letter");           //Password Requirements
 const capital = document.getElementById("capital");
 const number = document.getElementById("number");
 const plength = document.getElementById("length");
@@ -29,7 +29,7 @@ function requirements() {           //Show or hide password requirements
     };
 };
 
-function verifyPassword() {         //Show when specifice requirements are met
+function verifyPassword() {         //Show when specific password requirements are met
     let pass = document.getElementById('password').value;
     let conf = passConf.value;
     const lowCase = /^.*[a-z]/;
